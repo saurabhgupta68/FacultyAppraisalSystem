@@ -13,4 +13,4 @@ shobit maheshwari: https://github.com/shobhitm1/facultyproject/tree/updated-code
 
 varsha singh: https://github.com/Varshasingh123/faculty-appraisal-system/tree/updated-code
 
-vishakha karakoti: 
+vishakha karakoti: https://github.com/vishakhakarakoti/faculty-appraisal-system-group-project/tree/updated-code
