@@ -1,0 +1,41 @@
+Create Database database
+go
+CREATE TABLE dbo.logins
+(
+	login varchar(50) primary key,
+	password varchar(50) NULL,
+	usertype varchar(50) NULL,
+	username varchar(50) NULL,
+	userdepartment varchar(50) NULL,
+	loginadddate DateTime
+) 
+go
+CREATE TABLE dbo.CourseS
+(
+	Login varchar(50) references logins(login),
+	Term int,
+	CourseID varchar(20),
+	CL decimal(18,2),
+	CT decimal(18,2),
+	CP decimal(18,2),
+	CLTP decimal(18,2),
+	Cnof int,
+	Ca decimal(18,2),
+	Cb decimal(18,2),
+	Cc1 varchar(20),
+	Cc2 varchar(20),
+	Cres varchar(20),
+	Ccd decimal(18,2)
+	Constraint csqpk primary key(Login,Term,CourseID)
+)
+go
+Create table dbo.SyllabusQuality
+(
+	Login varchar(50) references logins(login),
+	Term int,
+	SelfCerti decimal(18,2),
+	hodcerti decimal(18,2),
+	pointsawd decimal(18,2),
+	Remarks varchar(20),
+	Constraint sqpk primary key(Login,Term)
+	)
